@@ -3,3 +3,5 @@ atlassian-ide-plugin.xml
 .idea
 npm-debug.log
 var/log/*.json
+public/components
+public/build
