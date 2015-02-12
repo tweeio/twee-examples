@@ -15,8 +15,16 @@ Then enter into some example folder and run:
 ```
 $ cd application
 $ npm install
+$ bower install
 $ grunt build
 $ npm start
 ```
 
 That's it!
+
+If you want to use some of examples for developing your project, then be sure you removed from
+`.gitignore` following lines:
+
+ - `application/public/build` - build should be stored
+ - `application/public/components` - bower components should be here
+ - `node_modules` - it should be in repository for good stable state on every release

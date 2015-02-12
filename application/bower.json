@@ -1,0 +1,16 @@
+{
+    "name": "application",
+    "version": "0.0.1",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {
+        "jquery": "*",
+        "bootstrap": "*",
+        "html5shiv": "*",
+        "respond": "*",
+        "jquery-placeholder": "*"
+    },
+    "devDependencies": {}
+}
