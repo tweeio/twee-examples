@@ -15,6 +15,7 @@ Then enter into some example folder and run:
 ```
 $ cd application
 $ npm install
+$ bower install
 $ grunt build
 $ npm start
 ```
