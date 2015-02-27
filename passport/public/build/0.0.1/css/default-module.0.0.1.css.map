@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../modules/default/assets/css/default-module.css"],"names":[],"mappings":"AAAA,IAAI,CAAC;AACL,IAAI,UAAU,CAAC,KAAK,CAAC,CAAC,KAAK,CAAC;AAC5B,CAAC","file":"default-module.0.0.1.css","sourcesContent":["body{\n    background-color: white;\n}\n"]}

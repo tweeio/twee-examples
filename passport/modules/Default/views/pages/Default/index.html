@@ -1,0 +1,33 @@
+{% extends '../../../../../views/layouts/layout.base.html' %}
+
+{% block content %}
+<div class="starter-template">
+    <div class="panel panel-default">
+        <h1>{{ tr('Welcome to Twee Starter Page') }}</h1>
+        <div class="panel-body">
+           <a class="btn btn-primary btn-lg" href="/login">
+               <i class="glyphicon glyphicon-log-in"></i>
+               LOGIN
+           </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% parent %}
+    {% if settings.env == 'production' %}
+        <script type="text/javascript" src="/assets/build/{{ package_version }}/js/default-module.{{ package_version }}.min.js"></script>
+    {% else %}
+        <script type="text/javascript" src="/assets/build/{{ package_version }}/js/default-module.{{ package_version }}.js"></script>
+    {% endif %}
+{% endblock js %}
+
+{% block css %}
+{% parent %}
+    {% if settings.env == 'production' %}
+        <link href="/assets/build/{{ package_version }}/css/default-module.{{ package_version }}.min.css" rel="stylesheet">
+    {% else %}
+        <link href="/assets/build/{{ package_version }}/css/default-module.{{ package_version }}.css" rel="stylesheet">
+    {% endif %}
+{% endblock css %}

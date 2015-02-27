@@ -1,0 +1,37 @@
+{% extends '../../../../../views/layouts/layout.base.html' %}
+
+{% block content %}
+<div class="starter-template">
+    <div class="panel panel-default">
+        <h1>{{ tr('Sign In/Up Page Example') }}</h1>
+        <div class="panel-body">
+            <a class="btn btn-primary" href="/auth/twitter">Twitter</a> |
+            <a class="btn btn-primary"  href="/auth/facebook">Facebook</a> |
+            <a class="btn btn-primary"  href="/auth/google">Google+</a> |
+            <a class="btn btn-primary"  href="/auth/linkedin">LinkedIn</a>
+            <br>
+            <h2>{{ tr('Returned User Data:') }}</h2>
+            <pre style="text-align: left">{{ JSON.stringify(user, null, '    ') }}</pre>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+{% parent %}
+    {% if settings.env == 'production' %}
+        <script type="text/javascript" src="/assets/build/{{ package_version }}/js/default-module.{{ package_version }}.min.js"></script>
+    {% else %}
+        <script type="text/javascript" src="/assets/build/{{ package_version }}/js/default-module.{{ package_version }}.js"></script>
+    {% endif %}
+{% endblock js %}
+
+{% block css %}
+{% parent %}
+    {% if settings.env == 'production' %}
+        <link href="/assets/build/{{ package_version }}/css/default-module.{{ package_version }}.min.css" rel="stylesheet">
+    {% else %}
+        <link href="/assets/build/{{ package_version }}/css/default-module.{{ package_version }}.css" rel="stylesheet">
+    {% endif %}
+{% endblock css %}

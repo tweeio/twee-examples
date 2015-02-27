@@ -1,0 +1,51 @@
+{
+    "name": "application",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "pstart": "NODE_PATH=./node_modules NODE_ENV=production PORT=80 node ./application.js",
+        "ssl-start": "NODE_PATH=./node_modules NODE_ENV=production PORT=80 sudo node ./application.js",
+        "start": "NODE_PATH=./node_modules NODE_ENV=development DEBUG=twee.io node ./application.js",
+        "assets": "NODE_PATH=./node_modules grunt assets",
+        "watch": "NODE_PATH=./node_modules grunt watch"
+    },
+    "dependencies": {
+        "twee": ">= 0.1.30",
+        "twee-http-parser-extension": "*",
+        "twee-logging-extension": "*",
+        "twee-powered-extension": "*",
+        "twee-static-extension": "*",
+        "twee-compressor-extension": "*",
+        "twee-view-extension": "*",
+        "twee-i18n-extension": "*",
+        "twee-cookies-extension": "*",
+        "twee-cache-extension": "*",
+        "twee-session-extension": "*",
+        "twee-passport-extension": "*",
+        "express-session": "*",
+        "passport": "*",
+        "passport-twitter": "*",
+        "passport-facebook": "*",
+        "passport-google": "*",
+        "passport-linkedin": "*",
+        "passport-http": "*",
+        "swig": "*",
+        "debug": "*",
+        "redis": "*"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-watch": "*",
+        "load-grunt-tasks": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-aws-s3": "*",
+        "grunt-notify": "*",
+        "grunt-bower-task": "*",
+        "grunt-express-server": "*"
+    }
+}
